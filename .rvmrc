@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# This is an RVM Project .rvmrc file, used to automatically load the ruby
+# development environment upon cd'ing into the directory
+
+ruby_string="ruby-1.9.2"
+gemset_name="daibonsai"
+
+if ! rvm list strings | grep -q "${ruby_string}" ; then
+	echo "${ruby_string} was not found, running 'rvm install ${ruby_string}'"
+	rvm install "${ruby_string}"
+fi
+rvm --create use "${ruby_string}@${gemset_name}"
+
+if ! command -v jekyll &>/dev/null ; then
+	gem install jekyll -v '0.10.0'
+fi

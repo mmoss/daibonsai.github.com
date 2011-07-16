@@ -8,7 +8,7 @@ section {
 }
 
 section img {
-	margin: 50px auto 0;
+	margin: 25px auto 0;
 }
 
 section h1 {
@@ -33,3 +33,21 @@ section h1 span.tld {
 	opacity: 0.4;
 }
 
+p {
+	font-size: 13px;
+	font-family: sans-serif;
+	font-weight: normal;
+	color: #c9d0a2;
+	margin:10px 0;
+	padding:0;
+}
+
+p a {
+	color:#e3e7d0;
+	text-decoration:none;
+}
+
+p a:hover {
+	color:#fff;
+	text-decoration:underline;
+}
